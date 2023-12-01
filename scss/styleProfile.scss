@@ -1,0 +1,155 @@
+    @import "colors";
+    @import "typography";
+    @import "mixins";
+    @import "images";
+    
+
+body {
+        background-color: $color1;
+        color: $color2;
+        font-size: $size-normal;
+}
+
+main {
+    width: 50%;
+    margin: 0 auto;
+}
+
+hr {
+    display: none;
+}
+
+h1 {
+    font-size: $size-xl;
+    border-bottom: 1px solid $color3;
+}
+
+h2 {
+    font-size: $size-medium;
+}
+.changeLang {
+    display: flex;
+    padding-bottom: $size-medium;
+    border-bottom: 1px solid $color3;
+    img {
+        width: 30%;
+        height: 30%;
+        margin-right: $size-normal;
+    }
+}
+
+.langCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+button {
+    border-radius: 0 !important;
+}
+
+.name {
+    background-color: $color3;
+    padding: 0.5rem 15rem 0.5rem 0.5rem;
+    font-weight: $bold;
+}
+
+.langDrop {
+    margin-top: 3rem;
+    padding-bottom: $size-normal;
+    border-bottom: 1px solid $color3;
+    width: 100%;
+}
+
+.maturitySet {
+    margin-top: $size-normal;
+}
+.maturity {
+    width: 60%;
+    margin-bottom: 0.5rem;
+}
+
+span {
+    font-weight: $bold;
+}
+
+.edit {
+    background-color: $color1;
+    color: $color3;
+    padding: 0.3rem 1rem;
+    border: 1px solid $color3;
+    text-transform: uppercase;
+    margin-right: $size-normal;
+    &:hover {
+      transform: scale(1.1);
+      background-color: $color2;
+      color: $color1;
+      font-weight: $bold;
+    }
+}
+
+.maturity-wrapper {
+    padding-bottom: $size-normal;
+    border-bottom: 1px solid $color3;
+}
+
+.autoplay-wrapper {
+    display: flex;
+    margin-bottom: $size-normal;
+}
+
+.autoplay-wrapper input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #ccc;
+    width: 25px;
+    height: 25px;
+}
+
+.autoplay-wrapper input[type="checkbox"]:checked {
+    background-color: $color3;
+    width: 25px;
+    height: 25px;
+}
+
+
+.autoplay-wrapper input[type="checkbox"] + label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px; 
+    font-size: 1rem; 
+}
+
+.confirm {
+    margin-top: $size-normal;
+}
+
+.save {
+    @extend .edit;
+    background-color: $color2;
+    color: $color1;
+    font-weight: $bold;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        width: 85%;
+        padding-bottom: $size-large ;
+    }
+
+    .maturity {
+        width: 75%;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .changeLang {
+    img {
+        width: 183px;
+        height: 183px;
+    }
+    }
+}

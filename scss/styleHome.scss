@@ -1,0 +1,116 @@
+@import "colors";
+@import "typography";
+@import "mixins";
+@import "images";
+
+a {
+    @include a
+}
+
+.navbar-brand{
+    margin-left: $size-medium;
+} 
+
+.nav-item {
+    color: $color2 !important;
+}
+
+.icon-wrapper {
+    margin-right: $size-medium;
+}
+
+@media screen and (max-width: 991px){
+    .icon-wrapper{
+        ul {
+            @include ul
+        }
+
+        ul li {
+            margin-left: $size-small;
+        }
+    }
+}
+    
+main, footer {
+    @include main-footer
+}
+
+h1 {
+    @include h1
+}
+
+.genres {
+    @include genres
+
+}
+
+h2 {
+    font-size: $size-medium !important;
+}
+
+.trending {
+    @include trending
+}
+
+.filmImg {
+    @include filmImg
+}
+
+.releases {
+    margin-bottom: $size-xl !important;
+}
+
+footer {
+    margin-top: 0;
+    button {
+        background-color: $color1;
+        color: $color2;
+        border: 1px solid $color2;
+        margin-bottom: $size-normal;
+    }
+
+    address {
+        font-size: 0.8rem;
+        color: $color3;
+    }
+}
+
+.container-footer {
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+.icon-footer
+    svg:not(:nth-child(1)) {
+    text-align: left;
+    margin-left: $size-small;
+}
+
+.options-footer {
+    margin: $size-normal 0;
+    display: flex;
+    justify-content: space-between;
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+    a {
+        font-size: $size-small;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .options-footer {
+        flex-direction: column;
+    }
+
+    .container-footer {
+        width: 100%;
+    }
+
+    a {
+        margin-bottom: $size-small;
+    }
+}
+

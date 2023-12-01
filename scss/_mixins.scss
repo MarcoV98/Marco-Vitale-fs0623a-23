@@ -1,0 +1,47 @@
+@mixin a {
+    text-decoration: none !important;
+    color: inherit !important;
+    cursor:  pointer !important;
+}
+
+@mixin ul {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+@mixin main-footer {
+    padding: $size-large !important;
+    background-color: $color1;
+    color: $color2;
+    margin-top: 4rem;
+}
+
+@mixin h1 {
+    display: inline-block;
+    margin-right: $size-large !important;
+    font-size: $size-large !important;
+    margin-bottom: $size-large !important;
+}
+
+@mixin genres {
+    margin-bottom: $size-small;
+    border-radius: 0 !important;
+    background-color: $color1 !important;
+
+}
+
+@mixin trending {
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-bottom: $size-large !important;
+    text-align: center !important;
+}
+
+@mixin filmImg {
+    margin-bottom: $size-normal !important;
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+}
+
